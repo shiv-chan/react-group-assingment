@@ -18,7 +18,6 @@ class CommentList extends React.Component {
 	}
 
 	handleDelete(id) {
-		console.log('comments' + this.state.comments);
 		let updatedComments = [...this.state.comments].filter((c) => c.id !== id);
 		this.setState({
 			comments: updatedComments,
@@ -45,7 +44,7 @@ class CommentList extends React.Component {
 								name={comment.name}
 								email={comment.email}
 								body={comment.body}
-								handleDelete={this.handleDelete}
+								handleDelete={this.handleDelete.bind(this)}
 							/>
 						))}
 					</tbody>
