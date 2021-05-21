@@ -5,7 +5,7 @@ class CommentList extends React.Component {
 	state = {
 		comments: null,
 	};
-
+	
 	componentDidMount() {
 		fetch('https://jsonplaceholder.typicode.com/comments')
 			.then((response) => response.json())
@@ -17,7 +17,7 @@ class CommentList extends React.Component {
 			.catch((error) => console.error('There is an error:' + error));
 	}
 
-	handleDelete(id) {
+	handleDelete = (id) => {
 		let updatedComments = [...this.state.comments].filter((c) => c.id !== id);
 		this.setState({
 			comments: updatedComments,
@@ -44,7 +44,7 @@ class CommentList extends React.Component {
 								name={comment.name}
 								email={comment.email}
 								body={comment.body}
-								handleDelete={this.handleDelete.bind(this)}
+								handleDelete={this.handleDelete}
 							/>
 						))}
 					</tbody>
