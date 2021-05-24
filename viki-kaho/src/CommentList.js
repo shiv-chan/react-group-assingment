@@ -30,7 +30,7 @@ class CommentList extends React.Component {
 				<table>
 					<thead>
 						<tr>
-							<th/>
+							<th className="hidden"/>
 							<th>Name</th>
 							<th>Email</th>
 							<th>Comment</th>

@@ -59,7 +59,7 @@ class Comment extends React.Component {
 			</tr>
 		) : (
 			<tr>
-				<td />
+				<td className="hidden"/>
 				<td>{this.state.name}</td>
 				<td>{this.state.email}</td>
 				<td>{this.state.body}</td>
