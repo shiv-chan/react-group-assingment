@@ -1,39 +1,48 @@
-h1{
-  text-align: center;
+h1 {
+	text-align: center;
 }
 
-table{
-  border-collapse: collapse;
-  width: 90%;
-  margin: auto;
+table {
+	border-collapse: collapse;
+	width: 90%;
+	margin: auto;
 }
 
-th, td {
-  padding: 5px;
-  text-align: left;
+thead {
+	background-color: aliceblue;
 }
 
-table, td, th {  
-  border: 1px solid #ddd;
-  text-align: left;
+tr:nth-child(even) {
+	background-color: #f8f5f1;
 }
 
-table td{
-  position: relative;
+th,
+td {
+	padding: 5px;
+	text-align: left;
 }
 
-table td input {
-  position: absolute;
-  display: block;
-  top:0;
-  left:0;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
+table,
+td,
+th {
+	border: 1px solid #ddd;
+	text-align: left;
 }
 
-.hidden{
-  display: none;
+table td {
+	position: relative;
+}
+
+table td input,
+table td textarea {
+	display: block;
+	margin: auto;
+	height: 90%;
+	width: 95%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.hidden {
+	display: none;
 }

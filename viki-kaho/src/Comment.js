@@ -43,9 +43,10 @@ class Comment extends React.Component {
 					/>
 				</td>
 				<td>
-					<input
+					<textarea
 						form={`form${this.props.id}`}
-						type="text"
+						rows="5"
+						cols="50"
 						name="body"
 						value={this.state.body}
 						onChange={(e) => this.setState({ body: e.target.value })}
@@ -59,7 +60,7 @@ class Comment extends React.Component {
 			</tr>
 		) : (
 			<tr>
-				<td className="hidden"/>
+				<td className="hidden" />
 				<td>{this.state.name}</td>
 				<td>{this.state.email}</td>
 				<td>{this.state.body}</td>
